@@ -6,7 +6,7 @@ else
 	CFLAGS := -Wall -O1 -DNDEBUG 
 endif
 
-LDFLAGS := -lrt -flto -fuse-ld=gold
+LDFLAGS := -flto
 
 all: sizes pointer swap
 
