@@ -22,6 +22,12 @@ pointer.o: pointer.c
 pointer: pointer.o
 	$(CC) -o pointer pointer.o $(LDFLAGS)
 
+fixed_pointer.o : fixed_pointer.c 
+	$(CC) $(CFLAGS) -c fixed_pointer.c
+
+fixed_pointer: fixed_pointer.o 
+	$(CC) -o fixed_pointer fixed_pointer.o $(LDFLAGS)
+
 swap.o: swap.c
 	$(CC) $(CFLAGS) -c swap.c
 
