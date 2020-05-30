@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#define PRINT_SIZE(type) printf("-> size of " #type ": %zu bytes \n", sizeof(type));
+#define PRINT_SIZE(type) printf("size of " #type ": %zu bytes \n", sizeof(type));
 
 int main() {
   PRINT_SIZE(int)
@@ -26,10 +26,12 @@ int main() {
   PRINT_SIZE(double *)
   PRINT_SIZE(uint8_t)
   PRINT_SIZE(uint8_t *) // unsigned char = 8 bits
-  PRINT_SIZE(uint16_t)
+  PRINT_SIZE(uint16_t) // unsigned short
   PRINT_SIZE(uint16_t *) // unsigned short = 16 bits
   PRINT_SIZE(uint32_t)
   PRINT_SIZE(uint32_t *) // unsigned int = 32 bits
+  PRINT_SIZE(uint64_t) // unsigned long long
+  PRINT_SIZE(uint64_t *) // unsigned long long
   PRINT_SIZE(uint_fast8_t)
   PRINT_SIZE(uint_fast8_t *) // probably same as uint8_t
   PRINT_SIZE(uint_fast16_t)
@@ -49,10 +51,12 @@ int main() {
   } student;
 
   PRINT_SIZE(student)
+  PRINT_SIZE(student *)
   PRINT_SIZE(student[100])
 
   int x[5];
   PRINT_SIZE(x)
+  PRINT_SIZE(&x)
 
   return 0;
 }
